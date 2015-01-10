@@ -1,0 +1,6 @@
+.idea
+node_modules
+js/*.min.js
+img/sprites/spritesheet.png
+css/*.min.css
+build

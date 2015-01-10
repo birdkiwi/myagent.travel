@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1000" >
+    <title>myAgent.travel — ваш персональный турагент</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="stylesheet" href="build/style.min.css">
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<header class="minimal-header">
+    <div class="wrapper">
+        <div class="minimal-header-logo">
+            <a href="#">myAgent.travel</a>
+        </div>
+        – более 250 000 агентов по туризму в 110 городах России, готовых помочь вам с выбором и приобретением туристических услуг
+    </div>
+</header>
+
+<div class="agent-header-block" style="background-image: url('images/temp/manager-background.jpg');">
+    <div class="wrapper">
+        <div class="agent-header-block-info">
+            <div class="agent-header-block-info-photo">
+                <img src="images/temp/lady.jpg" width="212" height="212" alt=""/>
+            </div>
+            <div class="agent-header-block-info-name">
+                <h1 class="agent-header-block-info-name-title">Александра Иванова</h1>
+                <h2 class="agent-header-block-info-name-subtitle">Агент по туризму, г. Новосибирск</h2>
+            </div>
+
+            <div class="agent-header-block-info-rating">
+                <div class="stars-block stars-block-large">
+                    <div class="stars-block-stars stars-block-grey-stars"></div>
+                    <div class="stars-block-stars stars-block-voted-stars" style="width: 94%"></div>
+                </div>
+                <a href="#">95 реальных отзывов</a>
+            </div>
+
+            <div class="agent-header-block-info-votes">
+                <a href="#">456</a>
+            </div>
+        </div>
+    </div><!-- /.wrapper -->
+</div><!-- /.agent-header-block -->
+
+<div class="wrapper">
+    <div class="speach-bubble-block">
+        Тем не менее, узнавание бренда уравновешивает рыночный стратегический маркетинг. Лидерство в продажах, анализируя результаты рекламной кампании, недостаточно допускает типичный клиентский спрос.
+    </div>
+</div>
+
+<div class="wrapper column-wrapper">
+
+
+    <main class="main-content with-sidebar" role="main">
+        <div class="agent-form-block" role="tabpanel">
+
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs container-fluid" role="tablist">
+                <li role="presentation" class="col-xs-4 active">
+                    <a href="#order-tab" aria-controls="home" role="tab" data-toggle="tab">Заявка на тур</a>
+                </li>
+                <li role="presentation" class="col-xs-4">
+                    <a href="#question-tab" aria-controls="profile" role="tab" data-toggle="tab">Задать вопрос</a>
+                </li>
+                <li role="presentation" class="col-xs-4">
+                    <a href="#callback-tab" aria-controls="messages" role="tab" data-toggle="tab">Заказать звонок</a>
+                </li>
+            </ul>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="order-tab">
+                    <form action="#">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <label for="name-field">Ваше имя</label>
+                                    <input type="text" id="name-field" name="name" />
+                                </div>
+                                <div class="col-xs-6">
+                                    <label for="phone-field">Телефон <span class="required">*</span></label>
+                                    <input type="text" id="phone-field" name="phone" class="error" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <label for="type-field">Вид отдыха</label>
+                                    <div class="custom-select">
+                                        <select name="type" id="type-field">
+                                            <option value="1">Семейный отдых с детьми</option>
+                                            <option value="2">Пляжный отдых</option>
+                                            <option value="3">Туристический отдых</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <label for="email-field">Email <span class="required">*</span></label>
+                                    <input id="email-field" type="email" name="email" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <label for="comment-field">Ваши пожелания</label>
+                                    <textarea name="comment" id="comment-field" cols="30" rows="10"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <input type="submit" class="button" value="Отправить" />
+                                </div>
+                                <div class="col-xs-8">
+                                    <div class="agent-form-block-desc">
+                                        <span class="required">*</span>
+                                        Обязательно оставьте контакты,<br/>
+                                        чтобы агент мог связаться с вами
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="agent-form-block-additional">
+                            <a href="#"><span>Подробная заявка</span></a>
+                        </div>
+                    </form>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="question-tab">...</div>
+                <div role="tabpanel" class="tab-pane" id="callback-tab">...</div>
+            </div>
+        </div>
+
+        <div class="module countries-module">
+            <h3 class="module-title">Страны <span class="module-title-sup">95</span></h3>
+            <div class="container-fluid countries-module-list">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <a href="#"><i class="flag flag-ad"></i>Тунис</a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="#"><i class="flag flag-cd"></i>Куба</a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="#"><i class="flag flag-it"></i>Италия</a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="#"><i class="flag flag-au"></i>Австралия</a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-3">
+                        <a href="#"><i class="flag flag-tk"></i>Турция</a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="#"><i class="flag flag-ch"></i>Китай</a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="#"><i class="flag flag-gr"></i>Греция</a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="#"><i class="flag flag-ge"></i>Германия</a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-3">
+                        <a href="#"><i class="flag flag-mc"></i>Мароко</a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="#"><i class="flag flag-st"></i>Испания</a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="#"><i class="flag flag-bg"></i>Болгария</a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="#"><i class="flag flag-th"></i>Таиланд</a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-3">
+                        <a href="#"><i class="flag flag-eg"></i>Египет</a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="#"><i class="flag flag-dm"></i>ЮАР</a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="#"><i class="flag flag-dz"></i>ОАЭ</a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="#"><i class="flag flag-ve"></i>Вьетнам</a>
+                    </div>
+                </div>
+            </div>
+            <div class="module-show-more">
+                <a href="#"><span>Показать все</span></a>
+            </div>
+        </div>
+
+        <div class="module activities-module">
+            <h3 class="module-title">Виды отдыха <span class="module-title-sup">4</span></h3>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="activities-module-item">
+                            <div class="activities-module-icon icon-activities-extreme"></div>
+                            Экстримальный
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="activities-module-item">
+                            <div class="activities-module-icon icon-activities-weeding"></div>
+                            Свадебный
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="activities-module-item">
+                            <div class="activities-module-icon icon-activities-teen"></div>
+                            Молодежный
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="activities-module-item">
+                            <div class="activities-module-icon icon-activities-tour"></div>
+                            Экскурсионный
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="module slider-module">
+            <div class="module-paginator">
+                <a href="#" class="module-paginator-left" data-target="-=1" data-jcarousel-control="true" data-jcarouselcontrol="true"></a>
+                <a href="#" class="module-paginator-right" data-target="+=1" data-jcarousel-control="true" data-jcarouselcontrol="true"></a>
+            </div>
+            <h3 class="module-title">Сертификаты об обучении <span class="module-title-sup">17</span></h3>
+
+            <div class="jcarousel" data-jcarousel="true" data-wrap="circular">
+                <ul>
+                    <li class="slider-module-item">
+                        <a href="images/temp/certificate.jpg" data-fancybox="true" rel="certificates" title="Сертификат на ручное бронирование">
+                            <img src="images/temp/certificate.jpg" alt="Сертификат" />
+                            <i class="slider-module-title">Ручное бронирование</i>
+                        </a>
+                    </li>
+                    <li class="slider-module-item">
+                        <a href="images/temp/certificate.jpg" data-fancybox="true" rel="certificates" title="Сертификат на Мальдивы">
+                            <img src="images/temp/certificate.jpg" alt="Сертификат" />
+                            <i class="slider-module-title">Мальдивы</i>
+                        </a>
+                    </li>
+                    <li class="slider-module-item">
+                        <a href="images/temp/certificate.jpg" data-fancybox="true" rel="certificates">
+                            <img src="images/temp/certificate.jpg" alt="Сертификат" />
+                            <i class="slider-module-title">Фиджи</i>
+                        </a>
+                    </li>
+                    <li class="slider-module-item">
+                        <a href="images/temp/certificate.jpg" data-fancybox="true" rel="certificates">
+                            <img src="images/temp/certificate.jpg" alt="Сертификат" />
+                            <i class="slider-module-title">Египет</i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="module-show-more">
+                <a href="#"><span>Показать все</span></a>
+            </div>
+        </div>
+
+        <div class="agent-reviews-block" id="comments-block">
+            <h3 class="agent-reviews-block-title">Отзывы о работе агента</h3>
+            <div class="agent-reviews-block-desc">
+                <p>Отзывы оставляются только людьми, заключившими договор и оплатившими поездку. Таким образом мы исключаем добавление фальшивых отзывов с целью накрутки рейтинга ли же очернения репутации агента.</p>
+            </div>
+
+            <div class="agent-reviews-block-item">
+                <div class="agent-reviews-block-item-meta">
+                    <h4 class="agent-reviews-block-item-meta-title">Дмитрий Грачев</h4>
+                    Поездка в Таиланд, о. Пхукет в ноябре 2014 г.
+                </div>
+
+                <p>Знаю Александру как настоящего профессионала. Не просто в туристическом бизнесе, где довольно жестокая конкуренция, найти свою нишу. Саша нашла. Что помогло ей стать большим профессионалом? Терпение, доброжелательность, знание своего дела, умение общаться с самыми разными клиентами!</p>
+
+                <div class="agent-reviews-block-answer">
+                    <h4 class="agent-reviews-block-answer-title">Александра Иванова</h4>
+                    Спасибо, Дмитрий!
+                </div>
+            </div>
+
+            <div class="agent-reviews-block-item">
+                <div class="agent-reviews-block-item-meta">
+                    <h4 class="agent-reviews-block-item-meta-title">Виктория</h4>
+                    Поездка в Грецию, Халкидики в мае 2014 г.
+                </div>
+
+                <p>Обещала отписаться про отдых по системе "Фортуна" ) Проэкспериментировала - понравилось. Не понимаю, почему многие боятся? Может быть это мне подфортило, я осталась довольна. По цене которой съездила.... да это мега супер-пупер!!! В магазине при покупке продуктов больше денег отдаем ;) А тут и перелет и трансфер и проживание и питание и напитки... Единственное после Мальдив конечно Египет не айс )</p>
+
+                <div class="agent-reviews-block-answer">
+                    <h4 class="agent-reviews-block-answer-title">Александра Иванова</h4>
+                    Спасибо ))) Да, Мальдивы и сравнивать не стоит с Египтом )) Надеюсь, еще смогу помочь с приобретением тура
+                </div>
+            </div>
+
+        </div>
+
+        <div class="horizontal-line">
+            <div class="horizontal-line-more">
+                <a href="#" class="horizontal-line-more-link" data-show-more="true" data-show-more-url="comments-list.html" data-show-more-target="#comments-block" data-show-more-element=".agent-reviews-block-item">
+                <span>
+                    Показать еще
+                </span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <aside class="main-sidebar sticky">
+        <div class="module contacts-module">
+            <h3 class="module-title">г. Новосибирск</h3>
+            <div class="contacts-module-vcard">
+                <div class="contacts-module-vcard-group">
+                    <div class="contacts-module-icon icon-phone-blue"></div>
+                    <div class="contacts-module-vcard-title">
+                        телефон
+                    </div>
+                    <a href="tel:+79132562365" class="contacts-module-vcard-value" style="text-decoration: none;">+7-913-256-2365</a>
+                </div>
+
+                <div class="contacts-module-vcard-group">
+                    <div class="contacts-module-icon icon-mail-blue"></div>
+                    <div class="contacts-module-vcard-title">
+                        электронная почта
+                    </div>
+                    <a href="mailto:a.ivanova@mail.ru" class="contacts-module-vcard-value">a.ivanova@mail.ru</a>
+                </div>
+
+                <div class="contacts-module-vcard-group">
+                    <div class="contacts-module-icon icon-skype-blue"></div>
+                    <div class="contacts-module-vcard-title">
+                        skype
+                    </div>
+                    <a href="skype:a.ivanova?chat" class="contacts-module-vcard-value">a.ivanova</a>
+                </div>
+            </div>
+            <div class="contacts-module-social">
+                <h4 class="contacts-module-social-title"><span>Социальные сети</span></h4>
+                <a href="#" class="contacts-module-social-item" target="_blank">
+                    <i class="contacts-module-social-item-icon icon-vk-small"></i>
+                    <span>Вконтакте</span>
+                </a>
+                <a href="#" class="contacts-module-social-item" target="_blank">
+                    <i class="contacts-module-social-item-icon icon-facebook-small"></i>
+                    <span>Facebook</span>
+                </a>
+                <a href="#" class="contacts-module-social-item" target="_blank">
+                    <i class="contacts-module-social-item-icon icon-odnoklassniki-small"></i>
+                    <span>Одноклассники</span>
+                </a>
+            </div>
+            <div class="contacts-module-links">
+                <a href="#" class="contacts-module-links-item">
+                    <i class="contacts-module-links-item-icon icon-briefcase-blue"></i>
+                    <span>Заявка на тур</span>
+                </a>
+                <a href="#" class="contacts-module-links-item">
+                    <i class="contacts-module-links-item-icon icon-ask-question-blue"></i>
+                    <span>Задать вопрос</span>
+                </a>
+                <a href="#" class="contacts-module-links-item">
+                    <i class="contacts-module-links-item-icon icon-callback-blue"></i>
+                    <span>Заказать звонок</span>
+                </a>
+            </div>
+        </div>
+    </aside>
+</div><!-- /.wrapper -->
+
+<footer class="main-footer">
+    <div class="wrapper">
+        <div class="share-block">
+            <h3 class="share-block-title">Расскажите друзьям</h3>
+            <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="small" data-yashareQuickServices="vkontakte,facebook,twitter,odnoklassniki,moimir,gplus" data-yashareTheme="counter"></div>
+        </div>
+    </div><!-- /.wrapper -->
+</footer><!-- /.main-footer -->
+
+<script src="build/scripts.min.js"></script>
+
+<!-- удалить: начало -->
+<script src="js/temp/remove-me.js"></script>
+<!-- удалить: коенц -->
+
+<script type="text/javascript" src="//yastatic.net/share/share.js" charset="utf-8"></script>
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?116"></script>
+</body>
+</html>
