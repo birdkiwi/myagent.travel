@@ -41,7 +41,7 @@
             <div class="agent-header-block-info-rating">
                 <div class="stars-block stars-block-large">
                     <div class="stars-block-stars stars-block-grey-stars"></div>
-                    <div class="stars-block-stars stars-block-voted-stars" style="width: 94%"></div>
+                    <div class="stars-block-stars stars-block-voted-stars" style="width: 91%"></div>
                 </div>
                 <a href="#">95 реальных отзывов</a>
             </div>
@@ -68,13 +68,13 @@
             <!-- Nav tabs -->
             <ul class="nav nav-tabs container-fluid" role="tablist">
                 <li role="presentation" class="col-xs-4 active">
-                    <a href="#order-tab" aria-controls="home" role="tab" data-toggle="tab">Заявка на тур</a>
+                    <a href="#order-tab" aria-controls="home" role="tab" data-toggle="tab" id="order-tab-link">Заявка на тур</a>
                 </li>
                 <li role="presentation" class="col-xs-4">
-                    <a href="#question-tab" aria-controls="profile" role="tab" data-toggle="tab">Задать вопрос</a>
+                    <a href="#question-tab" aria-controls="profile" role="tab" data-toggle="tab" id="question-tab-link">Задать вопрос</a>
                 </li>
                 <li role="presentation" class="col-xs-4">
-                    <a href="#callback-tab" aria-controls="messages" role="tab" data-toggle="tab">Заказать звонок</a>
+                    <a href="#callback-tab" aria-controls="messages" role="tab" data-toggle="tab" id="callback-tab-link">Заказать звонок</a>
                 </li>
             </ul>
 
@@ -137,8 +137,70 @@
                         </div>
                     </form>
                 </div>
-                <div role="tabpanel" class="tab-pane" id="question-tab">...</div>
-                <div role="tabpanel" class="tab-pane" id="callback-tab">...</div>
+                <div role="tabpanel" class="tab-pane" id="question-tab">
+                    <form action="#">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <label for="name-field-2">Ваше имя</label>
+                                    <input type="text" id="name-field-2" name="name" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <label for="phone-field-2">Телефон <span class="required">*</span></label>
+                                    <input type="text" id="phone-field-2" name="phone" class="error" />
+                                </div>
+                                <div class="col-xs-6">
+                                    <label for="email-field-2">Email <span class="required">*</span></label>
+                                    <input id="email-field-2" type="email" name="email" />
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <label for="comment-field-2">Вопрос</label>
+                                    <textarea name="comment" id="comment-field-2" cols="30" rows="10"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <input type="submit" class="button" value="Отправить" />
+                                </div>
+                                <div class="col-xs-8">
+                                    <div class="agent-form-block-desc">
+                                        <span class="required">*</span>
+                                        Обязательно оставьте контакты,<br/>
+                                        чтобы агент мог связаться с вами
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="callback-tab">
+                    <form action="#">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <label for="name-field-3">Ваше имя</label>
+                                    <input type="text" id="name-field-3" name="name" />
+                                </div>
+                                <div class="col-xs-6">
+                                    <label for="phone-field-3">Телефон <span class="required">*</span></label>
+                                    <input type="text" id="phone-field-3" name="phone" class="error" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-4">
+                                    <input type="submit" class="button" value="Отправить" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
 
@@ -373,16 +435,16 @@
                     <span>Одноклассники</span>
                 </a>
             </div>
-            <div class="contacts-module-links">
-                <a href="#" class="contacts-module-links-item">
+            <div class="contacts-module-links" data-scroll-hide=".agent-form-block">
+                <a href="#" class="contacts-module-links-item" data-scroll-to-tab="#order-tab-link">
                     <i class="contacts-module-links-item-icon icon-briefcase-blue"></i>
                     <span>Заявка на тур</span>
                 </a>
-                <a href="#" class="contacts-module-links-item">
+                <a href="#" class="contacts-module-links-item" data-scroll-to-tab="#question-tab-link">
                     <i class="contacts-module-links-item-icon icon-ask-question-blue"></i>
                     <span>Задать вопрос</span>
                 </a>
-                <a href="#" class="contacts-module-links-item">
+                <a href="#" class="contacts-module-links-item" data-scroll-to-tab="#callback-tab-link">
                     <i class="contacts-module-links-item-icon icon-callback-blue"></i>
                     <span>Заказать звонок</span>
                 </a>

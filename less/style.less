@@ -178,7 +178,6 @@ h1, h2, h3, h4, h5, h6 {
     height: 60px;
     line-height: 60px;
     padding: 0 30px;
-    text-shadow: 0 1px #BE4E30;
     font-size: 26px;
 
     .box-shadow(
@@ -215,7 +214,7 @@ h1, h2, h3, h4, h5, h6 {
   &-menu {
     .ul-inline;
     float: left;
-    padding-right: 20px;
+    padding-right: 35px;
     padding-top: 26px;
 
     &-item {
@@ -358,6 +357,10 @@ h1, h2, h3, h4, h5, h6 {
   &-item {
     display: inline-block;
     margin: 6px 10px;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   .icon-appstore {
@@ -377,6 +380,10 @@ h1, h2, h3, h4, h5, h6 {
   &-icon {
     display: inline-block;
     margin-left: 10px;
+
+    &:hover {
+      opacity: 0.8;
+    }
 
     &:before {
       display: inline-block;
@@ -735,38 +742,64 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.agents-block-howto-join {
+  display: block;
+  position: absolute;
+  right: -60px;
+  top: 10px;
+  background: url("../images/how-to-get-there.png");
+  width: 40px;
+  height: 230px;
+
+  a {
+    display: block;
+  }
+
+  &-close {
+    display: block;
+    width: 40px;
+    height: 30px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &-link {
+    display: block;
+    width: 40px;
+    height: 200px;
+    color: transparent;
+    text-indent: -10000px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &-small {
+    position: absolute;
+    display: none;
+    width: 50px;
+    height: 210px;
+    background: url("../images/how-to-get-there-no-arrow.png") no-repeat center #fff;
+    .border-radius(2px 0 0 2px);
+    right: 0;
+    z-index: 100;
+    .box-shadow(0 0 3px #cecece);
+
+    &-link {
+      height: 170px;
+    }
+  }
+}
+
 .agents-block {
   .clearfix;
 
   &-row {
     .clearfix;
     margin-bottom: 20px;
-  }
-  
-  &-howto-join {
-    display: block;
-    position: absolute;
-    right: -60px;
-    top: 10px;
-    background: url("../images/how-to-get-there.png");
-    width: 40px;
-    height: 230px;
-
-    a {
-      display: block;
-    }
-
-    &-close {
-      width: 40px;
-      height: 30px;
-    }
-
-    &-link {
-      width: 40px;
-      height: 200px;
-      color: transparent;
-      text-indent: -10000px;
-    }
   }
 
   &-item {
@@ -910,6 +943,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 350px;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   margin-bottom: 50px;
 
   .wrapper {
@@ -1537,6 +1571,10 @@ have a fixed width and height (but it's not required).
 @media all and ( max-width: 1100px ){
   .agents-block-howto-join {
     display: none;
+
+    &-small {
+      display: block;
+    }
   }
 }
 

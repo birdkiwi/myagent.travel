@@ -29,6 +29,7 @@ module.exports = function(grunt) {
                     'js/jquery.jcarousel-data-attributes.js',
                     'js/fancybox/jquery.fancybox.js',
                     'js/stickyfill.min.js',
+                    'js/jquery.scrollTo.min.js',
                     'js/script.js'
                 ],
                 dest: 'build/scripts.js'

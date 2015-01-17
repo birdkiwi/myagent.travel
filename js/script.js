@@ -42,3 +42,33 @@ $(document).on('click', '[data-show-more]', function(){
 
     return false;
 });
+
+$(document).on('click', '[data-scroll-to-tab]', function(){
+    var tab = $(this).data('scroll-to-tab');
+    $('body').scrollTo(tab, 500);
+    $(tab).tab('show');
+    return false;
+});
+
+$(window).scroll(function(){
+    $('[data-scroll-hide]').each(function() {
+        function isScrolledIntoView(elem) {
+            var docViewTop = $(window).scrollTop();
+            var docViewBottom = docViewTop + $(window).height();
+
+            var elemTop = $(elem).offset().top;
+            var elemBottom = elemTop + $(elem).height();
+
+            return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+        }
+        var element = $(this);
+        var target = $(element.data('scroll-hide'));
+        console.log(element);
+        console.log(target);
+        if (isScrolledIntoView(target)) {
+            element.slideDown();
+        } else {
+            element.slideUp();
+        }
+    });
+});
