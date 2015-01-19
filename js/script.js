@@ -7,7 +7,11 @@ $(document).ready(function(){
         }
     });
 
-    $('.sticky').Stickyfill();
+    $('.js-sticky').Stickyfill();
+
+    $('.js-chosen-select').chosen({
+        no_results_text: "К сожалению, ничего не найдено"
+    });
 });
 
 $(document).on('click', '[data-show-more]', function(){

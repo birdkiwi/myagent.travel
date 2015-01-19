@@ -3,6 +3,7 @@
 @import "../bootstrap/css/bootstrap.min.css";
 @import "../bootstrap/css/bootstrap-theme.min.css";
 @import "../js/fancybox/jquery.fancybox.css";
+@import "../js/chosen_v1.3.0/chosen.min.css";
 @import "sprites";
 @import "flags";
 
@@ -438,6 +439,21 @@ h1, h2, h3, h4, h5, h6 {
 
     &:last-child {
       margin-right: 0;
+    }
+  }
+
+  .chosen-container {
+    width: 100% !important;
+
+    .chosen-single {
+      height: 48px;
+      line-height: 48px;
+      background: #eee;
+      .border-radius(5px);
+
+      span {
+        font-size: 20px;
+      }
     }
   }
 
@@ -1531,39 +1547,78 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/*
-This is the visible area of you carousel.
-Set a width here to define how much items are visible.
-The width can be either fixed in px or flexible in %.
-Position must be relative!
-*/
+.chosen-container {
+
+  .chosen-single {
+    background: #fff;
+    border-radius: 2px;
+    border: none;
+    .box-shadow(none);
+    height: 40px;
+    line-height: 40px;
+    padding-left: 15px;
+
+    span {
+      font-size: 14px;
+    }
+
+    div {
+      width: 25px;
+
+      b {
+        background: url("../images/select-arrow.png") no-repeat center;
+      }
+    }
+  }
+
+  .chosen-drop {
+    border: none;
+    .box-shadow(none);
+    margin-top: -3px;
+  }
+
+  .chosen-search {
+    input[type="text"] {
+      color: #444;
+    }
+  }
+}
+
+.chosen-container-active {
+  &.chosen-with-drop {
+    .chosen-single {
+      background: #fff;
+      border: 0;
+      .box-shadow(none);
+
+      div {
+        b {
+          background-position: center;
+        }
+      }
+    }
+
+    .chosen-drop {
+      .box-shadow(0 10px 10px rgba(0, 0, 0, 0.5));
+    }
+  }
+}
+
 .jcarousel {
   position: relative;
   overflow: hidden;
-}
 
-/*
-This is the container of the carousel items.
-You must ensure that the position is relative or absolute and
-that the width is big enough to contain all items.
-*/
-.jcarousel ul {
-  width: 20000em;
-  position: relative;
+  ul {
+    width: 20000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 
-  /* Optional, required in this case since it's a <ul> element */
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/*
-These are the item elements. jCarousel works best, if the items
-have a fixed width and height (but it's not required).
-*/
-.jcarousel li {
-  /* Required only for block elements like <li>'s */
-  float: left;
+  li {
+    float: left;
+  }
 }
 
 //Media Queries

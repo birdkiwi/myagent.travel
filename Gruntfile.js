@@ -30,6 +30,7 @@ module.exports = function(grunt) {
                     'js/fancybox/jquery.fancybox.js',
                     'js/stickyfill.min.js',
                     'js/jquery.scrollTo.min.js',
+                    'js/chosen_v1.3.0/chosen.jquery.min.js',
                     'js/script.js'
                 ],
                 dest: 'build/scripts.js'
