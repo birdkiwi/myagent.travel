@@ -71,9 +71,11 @@ $(window).scroll(function(){
         }
         var element = $(this);
         var target = $(element.data('scroll-hide'));
-        console.log(element);
-        console.log(target);
-        if (isScrolledIntoView(target)) {
+        console.log($(window).scrollTop() < $(target).offset().top);
+        if (
+            isScrolledIntoView(target) ||
+            $(window).scrollTop() < $(target).offset().top
+        ) {
             element.slideUp();
         } else {
             element.slideDown();
