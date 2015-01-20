@@ -4,6 +4,7 @@
 @import "../bootstrap/css/bootstrap-theme.min.css";
 @import "../js/fancybox/jquery.fancybox.css";
 @import "../js/chosen_v1.3.0/chosen.min.css";
+@import "chosen";
 @import "sprites";
 @import "flags";
 
@@ -442,21 +443,6 @@ h1, h2, h3, h4, h5, h6 {
     }
   }
 
-  .chosen-container {
-    width: 100% !important;
-
-    .chosen-single {
-      height: 48px;
-      line-height: 48px;
-      background: #eee;
-      .border-radius(5px);
-
-      span {
-        font-size: 20px;
-      }
-    }
-  }
-
   &-orange {
     background-color: #ff754f;
     height: 130px;
@@ -651,17 +637,6 @@ h1, h2, h3, h4, h5, h6 {
 
   &-social {
 
-    &:after {
-      content: '';
-      display: block;
-      width: 306px;
-      margin-left: -25px;
-      margin-top: 20px;
-      margin-bottom: 20px;
-      height: 1px;
-      background: #c7c7c7;
-    }
-
     &-title {
       font-size: 11px;
       color: #7a7d86;
@@ -711,6 +686,18 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   &-links {
+
+    &:before {
+      content: '';
+      display: block;
+      width: 306px;
+      margin-left: -25px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      height: 1px;
+      background: #c7c7c7;
+    }
+
     &-item {
       .clearfix;
       margin-top: 14px;
@@ -1543,63 +1530,6 @@ h1, h2, h3, h4, h5, h6 {
 
     .stars-block-voted-stars {
       background-position: 0 -26px;
-    }
-  }
-}
-
-.chosen-container {
-
-  .chosen-single {
-    background: #fff;
-    border-radius: 2px;
-    border: none;
-    .box-shadow(none);
-    height: 40px;
-    line-height: 40px;
-    padding-left: 15px;
-
-    span {
-      font-size: 14px;
-    }
-
-    div {
-      width: 25px;
-
-      b {
-        background: url("../images/select-arrow.png") no-repeat center;
-      }
-    }
-  }
-
-  .chosen-drop {
-    border: none;
-    .box-shadow(none);
-    margin-top: -3px;
-  }
-
-  .chosen-search {
-    input[type="text"] {
-      color: #444;
-    }
-  }
-}
-
-.chosen-container-active {
-  &.chosen-with-drop {
-    .chosen-single {
-      background: #fff;
-      border: 0;
-      .box-shadow(none);
-
-      div {
-        b {
-          background-position: center;
-        }
-      }
-    }
-
-    .chosen-drop {
-      .box-shadow(0 10px 10px rgba(0, 0, 0, 0.5));
     }
   }
 }

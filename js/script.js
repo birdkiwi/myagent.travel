@@ -54,6 +54,10 @@ $(document).on('click', '[data-scroll-to-tab]', function(){
     return false;
 });
 
+$(document).on('chosen:ready', '.js-chosen-select', function(){
+    $(this).parent().removeClass('custom-select');
+});
+
 $(window).scroll(function(){
     $('[data-scroll-hide]').each(function() {
         function isScrolledIntoView(elem) {
@@ -70,9 +74,9 @@ $(window).scroll(function(){
         console.log(element);
         console.log(target);
         if (isScrolledIntoView(target)) {
-            element.slideDown();
-        } else {
             element.slideUp();
+        } else {
+            element.slideDown();
         }
     });
 });
