@@ -81,7 +81,7 @@
             <!-- Tab panes -->
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="order-tab">
-                    <form action="#">
+                    <form action="agent.html" data-show-form-success="#order-tab-success" class="js-validate">
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-xs-6">
@@ -90,7 +90,7 @@
                                 </div>
                                 <div class="col-xs-6">
                                     <label for="phone-field">Телефон <span class="required">*</span></label>
-                                    <input type="text" id="phone-field" name="phone" class="error" />
+                                    <input type="text" id="phone-field" name="phone" required />
                                 </div>
                             </div>
 
@@ -107,7 +107,7 @@
                                 </div>
                                 <div class="col-xs-6">
                                     <label for="email-field">Email <span class="required">*</span></label>
-                                    <input id="email-field" type="email" name="email" />
+                                    <input id="email-field" type="email" name="email" required />
                                 </div>
                             </div>
 
@@ -136,9 +136,19 @@
                             <a href="#"><span>Подробная заявка</span></a>
                         </div>
                     </form>
+                    <div id="order-tab-success" class="form-success-block">
+                        <h1 class="form-success-block-title">Ваша заявка на тур отправлена!</h1>
+                        <p>
+                            Александра свяжется с вами в ближайшее время <br/>
+                            по оставленным вами контактными данными.
+                        </p>
+                        <p>
+                            <a href="#" class="button" data-show-form="#order-tab form">ОК</a>
+                        </p>
+                    </div>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="question-tab">
-                    <form action="#">
+                    <form action="agent.html" data-show-form-success="#question-tab-success" class="js-validate">
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-xs-12">
@@ -150,11 +160,11 @@
                             <div class="row">
                                 <div class="col-xs-6">
                                     <label for="phone-field-2">Телефон <span class="required">*</span></label>
-                                    <input type="text" id="phone-field-2" name="phone" class="error" />
+                                    <input type="text" id="phone-field-2" name="phone" required />
                                 </div>
                                 <div class="col-xs-6">
                                     <label for="email-field-2">Email <span class="required">*</span></label>
-                                    <input id="email-field-2" type="email" name="email" />
+                                    <input id="email-field-2" type="email" name="email" required />
                                 </div>
                             </div>
 
@@ -179,9 +189,19 @@
                             </div>
                         </div>
                     </form>
+                    <div id="question-tab-success" class="form-success-block">
+                        <h1 class="form-success-block-title">Ваша вопрос отправлен!</h1>
+                        <p>
+                            Александра свяжется с вами в ближайшее время <br/>
+                            по оставленным вами контактными данными.
+                        </p>
+                        <p>
+                            <a href="#" class="button" data-show-form="#question-tab form">ОК</a>
+                        </p>
+                    </div>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="callback-tab">
-                    <form action="#">
+                    <form action="agent.html" data-show-form-success="#callback-tab-success" class="js-validate">
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-xs-6">
@@ -190,7 +210,7 @@
                                 </div>
                                 <div class="col-xs-6">
                                     <label for="phone-field-3">Телефон <span class="required">*</span></label>
-                                    <input type="text" id="phone-field-3" name="phone" class="error" />
+                                    <input type="text" id="phone-field-3" name="phone" required />
                                 </div>
                             </div>
                             <div class="row">
@@ -200,6 +220,16 @@
                             </div>
                         </div>
                     </form>
+                    <div id="callback-tab-success" class="form-success-block">
+                        <h1 class="form-success-block-title">Ваша запрос отправлен!</h1>
+                        <p>
+                            Александра свяжется с вами в ближайшее время <br/>
+                            по оставленным вами контактными данными.
+                        </p>
+                        <p>
+                            <a href="#" class="button" data-show-form="#callback-tab form">ОК</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

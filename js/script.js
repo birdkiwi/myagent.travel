@@ -12,6 +12,12 @@ $(document).ready(function(){
     $('.js-chosen-select').chosen({
         no_results_text: "К сожалению, ничего не найдено"
     });
+
+    $(".js-validate").each(function(){
+        $(this).validate({
+            errorPlacement: function(error, element) {}
+        });
+    });
 });
 
 $(document).on('click', '[data-show-more]', function(){
@@ -54,6 +60,33 @@ $(document).on('click', '[data-scroll-to-tab]', function(){
     return false;
 });
 
+$(document).on('click', '[data-show-form]', function(){
+    var form = $(this).data('show-form');
+    $(this).closest('.form-success-block').hide();
+    $(form).slideDown();
+    return false;
+});
+
+$(document).on('submit', '[data-show-form-success]', function(){
+    var form = $(this);
+    var actionUrl = form.attr('action');
+    var formSuccess = $(this).data('show-form-success');
+
+    if ( form.valid() ) {
+        $.ajax({
+            type: "POST",
+            url: actionUrl,
+            data: form.find('select, textarea, input').serialize(),
+            success: function(data) {
+                $(formSuccess).slideDown();
+                form.hide();
+                form[0].reset();
+            }
+        });
+    }
+    return false;
+});
+
 $(document).on('chosen:ready', '.js-chosen-select', function(){
     $(this).parent().removeClass('custom-select');
 });
@@ -71,7 +104,6 @@ $(window).scroll(function(){
         }
         var element = $(this);
         var target = $(element.data('scroll-hide'));
-        console.log($(window).scrollTop() < $(target).offset().top);
         if (
             isScrolledIntoView(target) ||
             $(window).scrollTop() < $(target).offset().top

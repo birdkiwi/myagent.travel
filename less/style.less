@@ -136,6 +136,17 @@ h1, h2, h3, h4, h5, h6 {
   color: #ff5151;
 }
 
+input[type="text"],
+input[type="submit"],
+input[type="password"],
+input[type="search"],
+input[type="email"] {
+  &.error {
+    border: 1px solid #ff5151;
+    background: #ffacb3;
+  }
+}
+
 .wrapper {
   .clearfix;
   position: relative;
@@ -1108,6 +1119,10 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 16px;
       padding: 0 10px;
       color: #444;
+
+      &.error {
+        background: #ffacb3;
+      }
     }
 
     textarea {
@@ -1177,6 +1192,19 @@ h1, h2, h3, h4, h5, h6 {
         .sprite(@icon-arrow-down);
       }
     }
+  }
+}
+
+.form-success-block {
+  display: none;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+
+  .form-success-block-title {
+    margin-bottom: 15px;
+    font-size: 28px;
+    font-weight: normal;
   }
 }
 

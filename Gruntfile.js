@@ -25,6 +25,7 @@ module.exports = function(grunt) {
                 src: [
                     'js/jquery.js',
                     'bootstrap/js/bootstrap.min.js',
+                    'js/jquery.validate.min.js',
                     'js/jquery.jcarousel.js',
                     'js/jquery.jcarousel-data-attributes.js',
                     'js/fancybox/jquery.fancybox.js',
