@@ -71,6 +71,7 @@ $(document).on('submit', '[data-show-form-success]', function(){
     var form = $(this);
     var actionUrl = form.attr('action');
     var formSuccess = $(this).data('show-form-success');
+    var errorMsg = form.data('ajax-form-error-msg');
 
     if ( form.valid() ) {
         $.ajax({
@@ -78,9 +79,13 @@ $(document).on('submit', '[data-show-form-success]', function(){
             url: actionUrl,
             data: form.find('select, textarea, input').serialize(),
             success: function(data) {
-                $(formSuccess).slideDown();
-                form.hide();
-                form[0].reset();
+                if(data.error === false) {
+                    $(formSuccess).slideDown();
+                    form.hide();
+                    form[0].reset();
+                } else {
+                    alert(errorMsg + " " + data.errorMessage);
+                }
             }
         });
     }
